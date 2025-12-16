@@ -22,7 +22,7 @@ export const CryptoCard = () => {
   };
 
   return (
-    <Card className="rounded-4xl px-6 pt-8 h-fit overflow-hidden w-full max-w-full sm:max-w-md md:max-w-lg lg:w-1/2 mx-auto box-border">
+    <Card className="rounded-4xl px-4 pt-8 h-fit overflow-hidden w-full max-w-full sm:max-w-md md:max-w-xl lg:w-1/2 mx-auto box-border">
       <Tabs
         defaultValue="crypto-to-cash"
         className="w-full flex flex-col sm:flex-col md:grid md:space-y-10 space-y-5"

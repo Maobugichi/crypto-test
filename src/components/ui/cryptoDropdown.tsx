@@ -1,4 +1,3 @@
-
 import React, {  useState } from "react";
 import caret from "@/assets/caret-test.svg"
 import { Button } from "@/components/ui/button";
@@ -12,6 +11,9 @@ import {
   CommandGroup,
   CommandItem,
 } from "@/components/ui/command";
+
+
+
 
 interface Coin {
   id: string;
@@ -88,7 +90,7 @@ export const CryptoDropdown: React.FC<CryptoDropdownProps> = ({
                 <span className="w-7 h-5 font-family-clash">{selectedCoin.symbol.toUpperCase()}</span>
               </div>
             ) : loadingCurrencies ? (
-              "Loading currencies..."
+              <span className="text-[5px]">'...'</span>
             ) : (
               <span className="w-28.5 text-[16px] leading-none tracking-normal text-[#013941] h-5">{placeholder}</span>
             )}

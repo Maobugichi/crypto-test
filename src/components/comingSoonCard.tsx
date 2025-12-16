@@ -42,7 +42,7 @@ export const ComingSoonCard: React.FC<ComingSoonCardProps> = ({
   };
 
   return (
-    <Card className=" w-full md:max-w-2xl flex flex-col min-h-[60vh] md:h-[80vh] border-none shadow-none px-4 md:px-0 gap-6">
+    <Card className=" w-full md:max-w-2xl flex flex-col h-fit md:mi-h-[80vh] border-none shadow-none px-4 md:px-0 gap-4">
       <CardHeader className="py-0">
         <h1 className="text-[24px] md:text-[32px] font-medium leading-tight text-center mx-auto text-[#013941]">
           {title}
@@ -55,8 +55,8 @@ export const ComingSoonCard: React.FC<ComingSoonCardProps> = ({
             {description}
           </p>
 
-          <div className="w-full grid gap-3">
-            <Label className="text-left text-[14px] md:text-[16px] font-semibold text-[#013941]">
+          <div className="w-full md:w-[93%] mx-auto grid gap-3">
+            <Label className="text-left text-[14px] md:text-[16px] ml-1 font-semibold text-[#013941]">
               Email
             </Label>
 
@@ -77,7 +77,7 @@ export const ComingSoonCard: React.FC<ComingSoonCardProps> = ({
         <Button
           onClick={handleFormSubmit}
           disabled={isSubmitting}
-          className="mt-8 md:mt-auto w-full h-12 md:h-15 rounded-[30px] py-3 md:py-5 px-5 bg-[#013941] text-[#E6FBF2] font-bold hover:bg-[#025159] disabled:opacity-50"
+          className="mt-8 md:mt-auto w-full md:w-[93%] mx-auto h-12 md:h-15 rounded-[30px] py-3 md:py-5 px-5 bg-[#013941] text-[#E6FBF2] font-bold hover:bg-[#025159] disabled:opacity-50"
         >
           {isSubmitting ? 'Submitting...' : buttonText}
         </Button>
