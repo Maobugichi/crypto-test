@@ -46,7 +46,7 @@ export const CryptoDropdown: React.FC<CryptoDropdownProps> = ({
   onSelectCoin,
   enableSearch = true,
   popoverTriggerClass = "",
-  buttonClass = " flex font-medium items-center justify-center gap-6 leading-5 text-[14px] border-[#E0E0E0] w-[100px] h-9 rounded-4xl border py-2 uppercase",
+  buttonClass = " flex font-medium items-center justify-center gap-6 leading-5 text-[14px] border-[#E0E0E0] md:w-[100px] h-9 rounded-4xl border py-2 uppercase",
   popoverContentClass ="max-h-[300px] overflow-hidden",
   commandClass = "",
   placeholder = "Select a cryptocurrency...",
@@ -115,7 +115,7 @@ export const CryptoDropdown: React.FC<CryptoDropdownProps> = ({
                 onValueChange={setSearch}
               />
             )}
-            <CommandList className=" max-h-[250px] overflow-y-auto">
+            <CommandList className=" max-h-62.5 overflow-y-auto">
               <CommandEmpty>No currency found.</CommandEmpty>
               <CommandGroup>
                 {filteredCoins.map((currency) => (
