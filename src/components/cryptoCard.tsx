@@ -77,7 +77,7 @@ export const CryptoCard = () => {
           
             <div className="w-full  grid gap-8 md:gap-10 h-fit md:mt-6">
               <Card className="w-full bg-transparent border-none shadow-none gap-4 px-1 md:px-0 box-border max-h-24">
-                <CardHeader className="py-0 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
+                <CardHeader className="py-0 px-2 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
                   Pay From
                 </CardHeader>
                 <CardContent className="px-0">
@@ -93,7 +93,7 @@ export const CryptoCard = () => {
               </Card>
 
               <Card className="bg-transparent w-full border-none shadow-none gap-4 px-1 md:px-0 box-border h-fit max-h-24">
-                <CardHeader className="py-0 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
+                <CardHeader className="py-0 px-2 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
                   Pay To
                 </CardHeader>
                 <CardContent className="px-0">
