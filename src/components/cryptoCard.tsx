@@ -1,12 +1,10 @@
-
-import { Card, CardContent, CardHeader } from "./ui/card"
-import { CryptoDropdown } from "./ui/cryptoDropdown"
-import { Tabs,  TabsContent } from "./ui/tabs"
+import { Card, CardContent, CardHeader } from "./ui/card";
+import { CryptoDropdown } from "./ui/cryptoDropdown";
+import { Tabs, TabsContent } from "./ui/tabs";
 import { useCryptoData } from "@/hooks/useCryptoData";
 import { Button } from "./ui/button";
 import { ComingSoonCard, type EmailFormData } from "./comingSoonCard";
 import { TabslistTrigger } from "./TabslistTrigger";
-
 
 export const CryptoCard = () => {
   const cryptoData1 = useCryptoData({
@@ -24,22 +22,28 @@ export const CryptoCard = () => {
   };
 
   return (
-    <Card className="rounded-4xl pt-8 h-fit overflow-hidden w-full max-w-full md:w-1/2 mx-auto box-border">
-      <Tabs defaultValue="crypto-to-cash" className="w-full max-w-full mx-auto flex flex-col md:grid md:space-y-10 space-y-5">
+    <Card className="rounded-4xl px-6 pt-8 h-fit overflow-hidden w-full max-w-full sm:max-w-md md:max-w-lg lg:w-1/2 mx-auto box-border">
+      <Tabs
+        defaultValue="crypto-to-cash"
+        className="w-full flex flex-col sm:flex-col md:grid md:space-y-10 space-y-5"
+      >
+        <TabslistTrigger />
 
-       
-       <TabslistTrigger/>
-        <TabsContent className="w-full min-h-fit md:h-screen flex flex-col md:grid space-y-5 md:space-y-20" value="crypto-to-cash">
-          <div className="w-full md:h-122 md:grid  space-y-6 md:gap-0">
+      
+        <TabsContent
+          className="w-full min-h-fit md:h-auto flex flex-col md:grid md:grid-cols-1 gap-6 md:gap-10"
+          value="crypto-to-cash"
+        >
+          <div className="w-full flex flex-col gap-4 h-fit md:gap-0">
 
-          
-            <Card className="w-[95%] px-1 md:w-lg mx-auto text-left shadow-none rounded-[30px] border p-4 md:p-6 gap-2 box-border">
-              <CardHeader className="my-0 px-0 md:h-5 md:w-166">
+         
+            <Card className="w-full px-1 md:px-4 mx-auto text-left shadow-none rounded-[30px] border p-4 md:p-6 gap-2 box-border h-fit max-h-30.5">
+              <CardHeader className="my-0 px-0">
                 <span className="text-[14px] md:text-[16px] text-[#828282] font-family-outfit font-medium">
                   You Pay
                 </span>
               </CardHeader>
-              <CardContent className="flex items-center gap-4 px-0 py-0 justify-between md:justify-between">
+              <CardContent className="px-1 flex items-center gap-4 justify-between">
                 <p className="text-[22px] md:text-[24px] font-semibold font-family-outfit leading-none">
                   1.00
                 </p>
@@ -52,13 +56,13 @@ export const CryptoCard = () => {
             </Card>
 
            
-            <Card className="w-[95%] px-1 md:w-lg mx-auto text-left shadow-none rounded-[30px] border p-4 md:p-6 gap-2 box-border">
-              <CardHeader className="my-0 px-0 md:h-5 md:w-166">
+            <Card className="w-full mt-5 px-1 md:px-4 mx-auto text-left shadow-none rounded-[30px] border p-4 md:p-6 gap-2 box-border h-fit  max-h-30.5 ">
+              <CardHeader className="my-0 px-0">
                 <span className="text-[14px] md:text-[16px] text-[#828282] font-family-outfit font-medium">
                   You Receive
                 </span>
               </CardHeader>
-              <CardContent className="flex items-center gap-4 px-0 py-0 justify-between md:justify-between">
+              <CardContent className="px-1 flex items-center gap-4 justify-between">
                 <p className="text-[22px] md:text-[24px] font-semibold font-family-outfit leading-none">
                   1.00
                 </p>
@@ -70,10 +74,10 @@ export const CryptoCard = () => {
               </CardContent>
             </Card>
 
-       
-            <div className="w-full grid gap-4 md:gap-8 space-y-4 mt-6 md:mt-0">
-              <Card className="w-[95%] md:w-lg mx-auto border-none shadow-none md:h-24 gap-4 px-1 md:px-0 box-border">
-                <CardHeader className="py-0 font-family-outfit font-medium text-left px-1 pt-1  text-[16px] text-[#013941]">
+          
+            <div className="w-full  grid gap-8 md:gap-10 h-fit md:mt-6">
+              <Card className="w-full bg-transparent border-none shadow-none gap-4 px-1 md:px-0 box-border max-h-24">
+                <CardHeader className="py-0 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
                   Pay From
                 </CardHeader>
                 <CardContent className="px-0">
@@ -81,15 +85,15 @@ export const CryptoCard = () => {
                     {...cryptoData3}
                     onSelectCoin={cryptoData3.handleSelect}
                     enableSearch={false}
-                    buttonClass="flex justify-between border border-[#E0E0E0] h-[60px] px-6 rounded-[30px] w-full font-family-outfit"
+                    buttonClass="flex justify-between border border-[#E0E0E0] h-14 md:h-16 px-6 rounded-[30px] w-full font-family-outfit"
                     popoverContentClass="p-0 max-h-[400px] md:w-[300px] w-full"
                     placeholder="Select an option"
                   />
                 </CardContent>
               </Card>
 
-              <Card className="w-[95%] md:w-lg px-1 mx-auto border-none shadow-none md:h-24 gap-4 box-border">
-                <CardHeader className="py-0 px-1 pt-1 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
+              <Card className="bg-transparent w-full border-none shadow-none gap-4 px-1 md:px-0 box-border h-fit max-h-24">
+                <CardHeader className="py-0 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
                   Pay To
                 </CardHeader>
                 <CardContent className="px-0">
@@ -97,7 +101,7 @@ export const CryptoCard = () => {
                     {...cryptoData3}
                     onSelectCoin={cryptoData3.handleSelect}
                     enableSearch={false}
-                    buttonClass="flex justify-between border border-[#E0E0E0] h-[60px] px-6 rounded-[30px] w-full font-family-outfit"
+                    buttonClass="flex justify-between border border-[#E0E0E0] h-14 md:h-16 px-6 rounded-[30px] w-full font-family-outfit"
                     popoverContentClass="p-0 max-h-[400px] md:w-[300px]"
                     placeholder="Select an option"
                   />
@@ -106,19 +110,18 @@ export const CryptoCard = () => {
             </div>
           </div>
 
-         
-          <Button className="w-[95%] md:w-[85%] h-15 font-family-instrument rounded-[30px] py-5 px-10 bg-[#013941] text-[16px] font-bold mx-auto">
+          <Button className="w-full sm:w-[95%] md:w-full mt-10 h-14 md:h-15 font-family-instrument rounded-[30px] py-4 md:py-5 px-6 md:px-10 bg-[#013941] text-[16px] font-bold mx-auto">
             Convert now
           </Button>
         </TabsContent>
 
-        
-        <TabsContent className="min-h-fit md:h-screen w-full" value="cash-to-crypto">
+      
+        <TabsContent className="min-h-fit md:h-auto w-full" value="cash-to-crypto">
           <ComingSoonCard
             title="Coming Soon!"
             description={
               <>
-                Cash to Crypto is almost here.<br/>
+                Cash to Crypto is almost here.<br />
                 Enter your email and we'll let you know the moment it's live.
               </>
             }
@@ -128,12 +131,13 @@ export const CryptoCard = () => {
           />
         </TabsContent>
 
-        <TabsContent className="min-h-fit md:h-screen w-full" value="crypto-fiat-loan">
+      
+        <TabsContent className="min-h-fit md:h-auto w-full" value="crypto-fiat-loan">
           <ComingSoonCard
             title="Coming Soon!"
             description={
               <>
-                Crypto to Fiat Loan is almost here.<br/>
+                Crypto to Fiat Loan is almost here.<br />
                 Enter your email and we'll let you know the moment it's live.
               </>
             }
@@ -146,4 +150,3 @@ export const CryptoCard = () => {
     </Card>
   );
 };
-
