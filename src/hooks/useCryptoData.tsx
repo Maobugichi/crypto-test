@@ -8,11 +8,9 @@ interface Coin {
   image: string;
 }
 
-// ============================================
-// Custom Hook for Crypto Data Logic
-// ============================================
+
 interface UseCryptoDataOptions {
-  autoSelectFirst?: boolean; // If true, auto-select first coin; if false, start with null
+  autoSelectFirst?: boolean; 
   onSelect?: (coin: Coin | null) => void;
   defaultCoin?: Coin | null;
 }
@@ -43,7 +41,7 @@ export const useCryptoData = ({
         }));
         setCurrencies(coins);
 
-        // Auto-select first coin if enabled and no defaultCoin provided
+       
         if (autoSelectFirst && coins.length > 0 && !defaultCoin) {
           setSelectedCoin(coins[0]);
           if (onSelect) {

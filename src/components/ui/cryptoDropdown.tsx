@@ -21,14 +21,13 @@ interface Coin {
 }
 
 interface CryptoDropdownProps {
-  // Hook data (pass the result from useCryptoData)
+
   currencies: Coin[];
   loadingCurrencies: boolean;
   selectedCoin: Coin | null;
   error: string;
   onSelectCoin: (coin: Coin) => void;
-  
-  // UI Configuration
+ 
   enableSearch?: boolean;
   popoverTriggerClass?: string;
   buttonClass?: string;

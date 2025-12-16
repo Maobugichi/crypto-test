@@ -1,10 +1,11 @@
 
 import { Card, CardContent, CardHeader } from "./ui/card"
 import { CryptoDropdown } from "./ui/cryptoDropdown"
-import { Tabs, TabsList , TabsTrigger, TabsContent } from "./ui/tabs"
+import { Tabs,  TabsContent } from "./ui/tabs"
 import { useCryptoData } from "@/hooks/useCryptoData";
 import { Button } from "./ui/button";
 import { ComingSoonCard, type EmailFormData } from "./comingSoonCard";
+import { TabslistTrigger } from "./TabslistTrigger";
 
 
 export const CryptoCard = () => {
@@ -27,24 +28,12 @@ export const CryptoCard = () => {
       <Tabs defaultValue="crypto-to-cash" className="w-full max-w-full mx-auto flex flex-col md:grid md:space-y-10 space-y-5">
 
        
-        <TabsList className="w-[95%] md:w-98 bg-[#F2F2F2] h-8.5 flex mx-auto p-0 md:text-[14px] rounded-full overflow-hidden">
-          <TabsTrigger className="font-family-outfit rounded-[30px]  md:text-[14px] px-3 md:w-30.75 h-full py-2 md:px-4 text-[#828282] data-[state=active]:bg-[#013941] data-[state=active]:text-[#F8FEFB] text-[clamp(10px,2.5vw,14px)]" value="crypto-to-cash">
-            Crypto to cash
-          </TabsTrigger>
-          <TabsTrigger className="rounded-[30px] md:w-30.75 h-full text-[12px] md:text-[14px] py-2 px-3 md:px-4 text-[#828282] data-[state=active]:bg-[#013941] data-[state=active]:text-[#F8FEFB]" value="cash-to-crypto">
-            Cash to crypto
-          </TabsTrigger>
-          <TabsTrigger className="rounded-[30px] md:w-30.75 h-full text-[12px] md:text-[14px] py-2 px-3 md:px-4 text-[#828282] data-[state=active]:bg-[#013941] data-[state=active]:text-[#F8FEFB]" value="crypto-fiat-loan">
-            Crypto to fiat loan
-          </TabsTrigger>
-        </TabsList>
-
-      
+       <TabslistTrigger/>
         <TabsContent className="w-full min-h-fit md:h-screen flex flex-col md:grid space-y-5 md:space-y-20" value="crypto-to-cash">
           <div className="w-full md:h-122 md:grid  space-y-6 md:gap-0">
 
           
-            <Card className="w-[95%] md:w-lg mx-auto text-left shadow-none rounded-[30px] border p-4 md:p-6 gap-2 box-border">
+            <Card className="w-[95%] px-1 md:w-lg mx-auto text-left shadow-none rounded-[30px] border p-4 md:p-6 gap-2 box-border">
               <CardHeader className="my-0 px-0 md:h-5 md:w-166">
                 <span className="text-[14px] md:text-[16px] text-[#828282] font-family-outfit font-medium">
                   You Pay
@@ -63,7 +52,7 @@ export const CryptoCard = () => {
             </Card>
 
            
-            <Card className="w-[95%] md:w-lg mx-auto text-left shadow-none rounded-[30px] border p-4 md:p-6 gap-2 box-border">
+            <Card className="w-[95%] px-1 md:w-lg mx-auto text-left shadow-none rounded-[30px] border p-4 md:p-6 gap-2 box-border">
               <CardHeader className="my-0 px-0 md:h-5 md:w-166">
                 <span className="text-[14px] md:text-[16px] text-[#828282] font-family-outfit font-medium">
                   You Receive
@@ -82,9 +71,9 @@ export const CryptoCard = () => {
             </Card>
 
        
-            <div className="w-full grid gap-4 md:gap-8 mt-6 md:mt-0">
-              <Card className="w-[95%] md:w-lg mx-auto border-none shadow-none md:h-24 gap-4 box-border">
-                <CardHeader className="py-0 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
+            <div className="w-full grid gap-4 md:gap-8 space-y-4 mt-6 md:mt-0">
+              <Card className="w-[95%] md:w-lg mx-auto border-none shadow-none md:h-24 gap-4 px-1 md:px-0 box-border">
+                <CardHeader className="py-0 font-family-outfit font-medium text-left px-1 pt-1  text-[16px] text-[#013941]">
                   Pay From
                 </CardHeader>
                 <CardContent className="px-0">
@@ -99,8 +88,8 @@ export const CryptoCard = () => {
                 </CardContent>
               </Card>
 
-              <Card className="w-[95%] md:w-lg mx-auto border-none shadow-none md:h-24 gap-4 box-border">
-                <CardHeader className="py-0 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
+              <Card className="w-[95%] md:w-lg px-1 mx-auto border-none shadow-none md:h-24 gap-4 box-border">
+                <CardHeader className="py-0 px-1 pt-1 font-family-outfit font-medium text-left text-[16px] text-[#013941]">
                   Pay To
                 </CardHeader>
                 <CardContent className="px-0">
@@ -118,7 +107,7 @@ export const CryptoCard = () => {
           </div>
 
          
-          <Button className="w-[95%] md:w-full h-15 font-family-instrument rounded-[30px] py-5 px-10 bg-[#013941] text-[16px] font-bold mx-auto">
+          <Button className="w-[95%] md:w-[85%] h-15 font-family-instrument rounded-[30px] py-5 px-10 bg-[#013941] text-[16px] font-bold mx-auto">
             Convert now
           </Button>
         </TabsContent>
